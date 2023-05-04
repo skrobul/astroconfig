@@ -11,4 +11,11 @@ return {
   { import = "astrocommunity.markdown-and-latex.markdown-preview-nvim" },
   { import = "astrocommunity.syntax.vim-easy-align" },
   { import = "astrocommunity.motion.nvim-surround" },
+  { import = "astrocommunity.scrolling.cinnamon-nvim" },
+  { import = "astrocommunity.pack.python" },
+  { import = "astrocommunity.pack.bash" },
+  { import = "astrocommunity.pack.json" },
+  { import = "astrocommunity.pack.markdown" },
+  { import = "astrocommunity.pack.yaml" },
+  { import = "astrocommunity.colorscheme.catppuccin" }
 }
