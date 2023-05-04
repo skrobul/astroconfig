@@ -10,4 +10,5 @@ return {
   { import = "astrocommunity.project.project-nvim" },
   { import = "astrocommunity.markdown-and-latex.markdown-preview-nvim" },
   { import = "astrocommunity.syntax.vim-easy-align" },
+  { import = "astrocommunity.motion.nvim-surround" },
 }
