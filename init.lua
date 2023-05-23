@@ -26,7 +26,7 @@ return {
     formatting = {
       -- control auto formatting on save
       format_on_save = {
-        enabled = true,     -- enable or disable format on save globally
+        enabled = false,    -- enable or disable format on save globally
         allow_filetypes = { -- enable format on save for specified filetypes only
           -- "go",
         },
@@ -73,5 +73,9 @@ return {
     --     ["~/%.config/foo/.*"] = "fooscript",
     --   },
     -- }
+
+
+    -- ZMK keymap formatting
+    -- vim.api.nvim_create_user_command("ZMKFormatKeycodes", "EasyAlign * /&\\w\\+/ dll2", {})
   end,
 }
