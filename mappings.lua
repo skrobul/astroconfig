@@ -22,8 +22,10 @@ return {
     -- this is useful for naming menus
     ["<leader>b"] = { name = "Buffers" },
     ["<leader>fp"] = { ":Telescope projects<cr>", desc = "Find project" },
-    ["ga"] = "<Plug>(EasyAlign)",
-    desc = "Interactive EasyAlign",
+    ["ga"] = { "<Plug>(EasyAlign)", desc = "Interactive EasyAlign" },
+    ["]q"] = { "<cmd>cnext<cr>", desc="Quickfix next"},
+    ["[q"] = { "<cmd>cprev<cr>", desc="Quickfix prev"},
+
     -- quick save
     -- ["<C-s>"] = { ":w!<cr>", desc = "Save File" },  -- change description but the same command
   },
