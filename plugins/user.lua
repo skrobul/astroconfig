@@ -9,8 +9,4 @@ return {
   --     require("lsp_signature").setup()
   --   end,
   -- },
-  {
-    "towolf/vim-helm",
-    event = "BufRead"
-  }
 }
