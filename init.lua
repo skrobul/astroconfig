@@ -46,6 +46,11 @@ return {
     servers = {
       -- "pyright"
     },
+    config = {
+      helm_ls = {
+        filetypes = { "helm", "helm.yaml", "helm.tmpl"}
+      }
+    }
   },
   -- Configure require("lazy").setup() options
   lazy = {
@@ -62,6 +67,31 @@ return {
   -- anything that doesn't fit in the normal config locations above can go here
   polish = function()
     -- Set up custom filetypes
+    local utils = require("user.helm.utils")
+    vim.filetype.add({
+      extension = {
+        yaml = utils.yaml_filetype,
+        yml = utils.yaml_filetype,
+        tmpl = utils.tmpl_filetype,
+        tpl = utils.tpl_filetype
+      },
+      filename = {
+        ["Chart.yaml"] = "yaml",
+        ["Chart.lock"] = "yaml",
+      }
+    })
+
+
+    local events = { "BufNewFile", "BufRead" }
+
+    local au_helm = vim.api.nvim_create_augroup("Helm", {})
+
+    vim.api.nvim_create_autocmd(events, {
+      pattern = "helm*",
+      group = au_helm,
+      command = "setlocal commentstring={{/*\\ %s\\ */}}",
+    })
+
     -- vim.filetype.add {
     --   extension = {
     --     foo = "fooscript",
