@@ -8,7 +8,8 @@ return {
     signcolumn = "auto", -- sets vim.opt.signcolumn to auto
     wrap = false, -- sets vim.opt.wrap
     spellfile = vim.fn.expand "~/dotfiles/vim/spell/en.utf-8.add",
-    swapfile = false
+    swapfile = false,
+    fillchars = { diff = "╱", eob = " ", fold = ">" }
   },
   g = {
     mapleader = " ", -- sets vim.g.mapleader
