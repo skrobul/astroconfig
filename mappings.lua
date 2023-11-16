@@ -28,6 +28,7 @@ return {
 
     -- quick save
     -- ["<C-s>"] = { ":w!<cr>", desc = "Save File" },  -- change description but the same command
+    ["<leader>fw"] =  { require("telescope").extensions.live_grep_args.live_grep_args, desc="Live Grep" }
   },
   t = {
     -- setting a mapping to false will disable it
