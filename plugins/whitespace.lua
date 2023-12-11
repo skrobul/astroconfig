@@ -20,6 +20,7 @@ return {
               'alpha',
               'gitcommit',
               'toggleterm',
+              'dap-repl'
             },
 
             -- `ignore_terminal` configures whether to ignore terminal buffers
@@ -34,4 +35,3 @@ return {
     event = "VeryLazy"
   }
 }
- 
