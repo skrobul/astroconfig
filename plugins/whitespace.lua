@@ -10,7 +10,17 @@ return {
 
             -- `ignored_filetypes` configures which filetypes to ignore when
             -- displaying trailing whitespace
-            ignored_filetypes = { 'TelescopePrompt', 'Trouble', 'help', 'mason', 'lazy', 'WhichKey', 'alpha', 'gitcommit' },
+            ignored_filetypes = {
+              'TelescopePrompt',
+              'Trouble',
+              'help',
+              'mason',
+              'lazy',
+              'WhichKey',
+              'alpha',
+              'gitcommit',
+              'toggleterm',
+            },
 
             -- `ignore_terminal` configures whether to ignore terminal buffers
             ignore_terminal = true,
@@ -24,4 +34,4 @@ return {
     event = "VeryLazy"
   }
 }
-
+ 
