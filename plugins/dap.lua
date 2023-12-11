@@ -1,6 +1,6 @@
 return {
   "mfussenegger/nvim-dap",
-  config = function(plugin, opts)
+  config = function(_, _)
     local dap = require("dap")
     dap.adapters = {
       python = {
@@ -66,5 +66,8 @@ return {
         },
       }
     }
-  end
+  end,
+  keys = {
+    { "<leader>dj", function() require('dap.ext.vscode').load_launchjs(nil, {}) end, desc="Load launch.json" }
+  }
 }
