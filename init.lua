@@ -49,6 +49,15 @@ return {
     config = {
       helm_ls = {
         filetypes = { "helm", "helm.yaml", "helm.tmpl"}
+      },
+      yaml = {
+        schemas = {
+          ["https://json.schemastore.org/github-workflow.json"] = "/.github/workflows/*"
+          },
+        schemaStore = {
+          enable = true,
+          -- url=
+        }
       }
     }
   },
@@ -92,18 +101,14 @@ return {
       command = "setlocal commentstring={{/*\\ %s\\ */}}",
     })
 
-    -- vim.filetype.add {
-    --   extension = {
-    --     foo = "fooscript",
-    --   },
-    --   filename = {
-    --     ["Foofile"] = "fooscript",
-    --   },
-    --   pattern = {
-    --     ["~/%.config/foo/.*"] = "fooscript",
-    --   },
-    -- }
+    local yaml_ft = require("user.ansible.autodetect").yaml_ft
 
+    vim.filetype.add {
+      extension = {
+        yml = yaml_ft,
+        yaml = yaml_ft,
+      },
+    }
 
     -- ZMK keymap formatting
     -- vim.api.nvim_create_user_command("ZMKFormatKeycodes", "EasyAlign * /&\\w\\+/ dll2", {})
