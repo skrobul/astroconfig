@@ -1,6 +1,7 @@
 return {
   {
     "sindrets/diffview.nvim",
-    cmd = { "DiffviewFileHistory", "DiffviewOpen", "DiffviewFocusFiles", "DiffviewLog" }
+    cmd = { "DiffviewFileHistory", "DiffviewOpen", "DiffviewFocusFiles", "DiffviewLog" },
+    event = "User AstroGitFile",
   }
 }
