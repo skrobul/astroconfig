@@ -9,7 +9,8 @@ return {
     wrap = false, -- sets vim.opt.wrap
     spellfile = vim.fn.expand "~/dotfiles/vim/spell/en.utf-8.add",
     swapfile = false,
-    fillchars = { diff = "╱", eob = " ", fold = ">" }
+    fillchars = { diff = "╱", eob = " ", fold = ">" },
+    titlelen = 15
   },
   g = {
     mapleader = " ", -- sets vim.g.mapleader
