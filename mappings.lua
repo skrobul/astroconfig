@@ -30,6 +30,19 @@ return {
     -- ["<C-s>"] = { ":w!<cr>", desc = "Save File" },  -- change description but the same command
     ["<leader>fw"] =  { require("telescope").extensions.live_grep_args.live_grep_args, desc="Live Grep" },
 
+    -- smart-splits
+    --
+    -- move between splits
+    ["<C-h>"] = { require("smart-splits").move_cursor_left, desc="Move to split left" },
+    ["<C-j>"] = { require("smart-splits").move_cursor_down, desc="Move to split down" },
+    ["<C-k>"] = { require("smart-splits").move_cursor_up, desc="Move to split up" },
+    ["<C-l>"] = { require("smart-splits").move_cursor_right, desc="Move to right split" },
+    -- resizing
+    ["<A-h>"] = { require("smart-splits").resize_cursor_left, desc="resize to split left" },
+    ["<A-j>"] = { require("smart-splits").resize_cursor_down, desc="resize to split down" },
+    ["<A-k>"] = { require("smart-splits").resize_cursor_up, desc="resize to split up" },
+    ["<A-l>"] = { require("smart-splits").resize_cursor_right, desc="resize to right split" },
+
   },
   t = {
     -- setting a mapping to false will disable it
@@ -38,4 +51,5 @@ return {
   x = {
     ["ga"] = "<Plug>(EasyAlign)", desc = "Interactive EasyAlign",
   }
+
 }
