@@ -90,6 +90,8 @@ return {
       }
     })
 
+    require("user.functions")
+
 
     local events = { "BufNewFile", "BufRead" }
 
