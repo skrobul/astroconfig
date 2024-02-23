@@ -10,5 +10,5 @@ return {
   --   end,
   -- },
   --
-  "jghauser/mkdir.nvim"
+  "jghauser/mkdir.nvim",
 }
